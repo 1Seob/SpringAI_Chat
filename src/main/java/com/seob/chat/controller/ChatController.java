@@ -18,6 +18,6 @@ public class ChatController {
         return this.chatClient.prompt()
                 .user(userPrompt)
                 .call()
-                .content();
+                .content(); // 받아온 응답 중 메타데이터는 버리고, 순수 content만 추출
     }
 }
