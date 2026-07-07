@@ -47,6 +47,11 @@ public class ChatController {
         return chatService.stream(prompt, promptBody.conversationId());
     }
 
+    @PostMapping(value = "/cs", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ChatService.CsEvaluation cs(@RequestBody @Valid PromptBody promptBody) {
+        return chatService.csEvaluation(createPrompt(promptBody), promptBody.conversationId());
+    }
+
     private static Prompt createPrompt(PromptBody promptBody) {
         // 1. 메시지들을 차곡차곡 담을 빈 리스트를 생성
         List<Message> messages = new ArrayList<>();
