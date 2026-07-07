@@ -1,6 +1,7 @@
 spring:
   application:
     name: chat
+    cli: false
   ai:
     openai:
       # 환경변수 값
@@ -17,3 +18,7 @@ spring:
         pull-model-strategy: when_missing
       chat:
         model: hf.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF
+
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: DEBUG
