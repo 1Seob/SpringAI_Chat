@@ -36,4 +36,4 @@ app:
     in-memory:
       enabled: true
   cli:
-    enabled: true
+    enabled: false
