@@ -30,5 +30,8 @@ app:
   rag:
     documents-location-pattern: classpath:example.pdf
   etl:
-    pipleline:
+    pipeline:
       init: true
+  vectorstore:
+    in-memory:
+      enabled: true
